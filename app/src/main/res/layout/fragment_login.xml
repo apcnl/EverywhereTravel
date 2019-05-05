@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/c_FFFFFF"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/container">
+
+    <TextView
+        android:layout_width="@dimen/dp_201"
+        android:layout_height="@dimen/dp_22"
+        android:layout_alignBottom="@+id/textView"
+        android:layout_alignLeft="@+id/textView"
+        android:layout_alignStart="@+id/textView"
+        android:layout_marginBottom="48dp"
+        android:text="你好，为了获取更好的服务"
+        android:textColor="@color/c_FA6A13"
+        android:textSize="@dimen/sp_16" />
+    <TextView
+        android:textColor="@color/c_373737"
+        android:text="请登录到处旅行"
+        android:textSize="@dimen/sp_27"
+        android:layout_marginTop="@dimen/dp_104"
+        android:layout_marginLeft="@dimen/dp_23"
+        android:layout_width="@dimen/dp_198"
+        android:layout_height="@dimen/dp_38"
+        android:id="@+id/textView" />
+    <TextView
+        android:id="@+id/xian"
+        android:background="@color/c_FA6A13"
+        android:layout_marginLeft="@dimen/dp_23"
+        android:layout_marginTop="@dimen/dp_279"
+        android:layout_width="@dimen/dp_329"
+        android:layout_height="@dimen/dp_1" />
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:layout_marginRight="@dimen/dp_23"
+        android:layout_marginLeft="@dimen/dp_31"
+        android:layout_marginTop="@dimen/dp_244"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:src="@mipmap/phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_marginLeft="@dimen/dp_8"
+            android:textColor="@color/c_636363"
+            android:text="+86"
+            android:textSize="@dimen/sp_14"
+            android:layout_width="@dimen/dp_28"
+            android:layout_height="@dimen/dp_20" />
+        <ImageView
+            android:layout_marginLeft="@dimen/dp_2"
+            android:src="@mipmap/select"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/ed_phone"
+            android:layout_marginLeft="@dimen/dp_16"
+            android:cursorVisible="false"
+            android:background="@null"
+            android:layout_width="@dimen/dp_118"
+            android:layout_height="@dimen/dp_22"
+            android:hint="请输入手机号码"
+            android:textColor="@color/c_FFC8C8C8"
+            android:textSize="@dimen/sp_16"
+            android:textColorHint="@color/c_FFC8C8C8"/>
+        <Button
+            android:layout_marginLeft="@dimen/dp_20"
+            android:id="@+id/btn_send"
+            android:textSize="@dimen/sp_14"
+            android:textColor="@color/c_FFFEFEFE"
+            android:text="发送验证码"
+            android:background="@drawable/bg_btn_ea3_d15"
+            android:layout_width="@dimen/dp_90"
+            android:layout_height="@dimen/dp_30" />
+    </LinearLayout>
+    <TextView
+        android:layout_below="@id/xian"
+        android:id="@+id/or"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp_140"
+        android:layout_marginLeft="@dimen/dp_180"
+        android:layout_width="@dimen/dp_15"
+        android:layout_height="@dimen/dp_20"
+        android:text="or"
+        android:textColor="@color/c_FFA9A9A9"
+        android:textSize="@dimen/sp_14" />
+    <LinearLayout
+        android:layout_marginTop="@dimen/dp_6"
+        android:id="@+id/ll_container"
+        android:layout_below="@id/or"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/umeng_qq"
+            android:src="@drawable/umeng_socialize_qq"
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="@dimen/dp_50"
+            />
+        <ImageView
+            android:id="@+id/umeng_weibo"
+            android:src="@drawable/umeng_socialize_sina"
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="@dimen/dp_50"
+            />
+    </LinearLayout>
+    <TextView
+        android:layout_marginTop="@dimen/dp_9"
+        android:layout_below="@id/ll_container"
+        android:id="@+id/wechat_login"
+        android:layout_marginBottom="@dimen/dp_83"
+        android:layout_centerHorizontal="true"
+        android:layout_width="@dimen/dp_51"
+        android:layout_height="@dimen/dp_17"
+        android:text="三方登录"
+        android:textColor="#FF4DAE46"
+        android:textSize="@dimen/sp_12"
+        />
+    <TextView
+        android:layout_marginLeft="@dimen/dp_83"
+        android:id="@+id/ok"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/dp_20"
+        android:layout_width="@dimen/dp_209"
+        android:layout_height="@dimen/dp_18"
+        android:text="登录或注册即同意到处旅行用户协议"
+        android:textColor="@color/c_FF999999"
+        android:textSize="@dimen/sp_13"
+        />
+
+</RelativeLayout>
+

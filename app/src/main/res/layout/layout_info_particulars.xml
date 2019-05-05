@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:background="@color/c_FFFFFF"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_52">
+        <ImageView
+            android:src="@mipmap/back_white"
+            android:layout_marginTop="@dimen/dp_12"
+            android:layout_width="@dimen/dp_25"
+            android:layout_height="@dimen/dp_25" />
+        <TextView
+            android:textColor="@color/c_373737"
+            android:text="消息详情"
+            android:textSize="@dimen/sp_16"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dp_12"
+            android:layout_width="@dimen/dp_64"
+            android:layout_height="@dimen/dp_25" />
+    </android.support.v7.widget.Toolbar>
+    <RelativeLayout
+        android:background="@color/c_EAEAEA"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:layout_marginTop="@dimen/dp_94"
+        android:layout_width="@dimen/dp_240"
+        android:layout_height="@dimen/dp_65">
+        <TextView
+            android:text="2017/10/21"
+            android:textColor="@color/c_999999"
+            android:textSize="@dimen/sp_12"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_width="@dimen/dp_62"
+            android:layout_height="@dimen/dp_17"
+            android:layout_marginTop="@dimen/dp_10"/>
+        <TextView
+            android:layout_marginTop="@dimen/dp_33"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_width="@dimen/dp_208"
+            android:layout_height="@dimen/dp_22"
+            android:text="请问日本的西瓜卡怎么办理？"
+            android:textColor="#FF636363"
+            android:textSize="@dimen/sp_16"
+            />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_marginRight="@dimen/dp_20"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="@dimen/dp_179"
+        android:layout_width="@dimen/dp_240"
+        android:layout_height="@dimen/dp_87"
+        android:background="#FFFCEEE3"
+        >
+        <TextView
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_width="@dimen/dp_62"
+            android:layout_height="@dimen/dp_17"
+            android:text="2017/10/21"
+            android:textColor="@color/c_FF999999"
+            android:textSize="@dimen/sp_12"
+            />
+        <TextView
+            android:layout_marginRight="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_33"
+            android:layout_alignParentRight="true"
+            android:layout_width="@dimen/dp_208"
+            android:layout_height="@dimen/dp_44"
+            android:text="         在个地铁口都可以买到，
+有一个西瓜卡的自动售卖机。"
+            android:textColor="@color/c_FF636363"
+            android:textSize="@dimen/sp_16"
+            />
+    </RelativeLayout>
+
+</RelativeLayout>
