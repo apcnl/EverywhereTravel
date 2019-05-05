@@ -1,20 +1,31 @@
 package com.example.apcnl.travel.fragment;
 
+import android.content.Context;
+import android.hardware.input.InputManager;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.text.Editable;
+import android.text.SpannableStringBuilder;
+import android.text.Spanned;
 import android.text.TextUtils;
 import android.text.TextWatcher;
+import android.text.method.LinkMovementMethod;
+import android.text.style.ClickableSpan;
+import android.text.style.ForegroundColorSpan;
+import android.text.style.UnderlineSpan;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import com.example.apcnl.travel.R;
+import com.example.apcnl.travel.activity.WebViewActivity;
 import com.example.apcnl.travel.base.BaseFragment;
 import com.example.apcnl.travel.presenter.LoginFragmentpresenter;
 import com.example.apcnl.travel.view.LoginFragmentView;
@@ -37,9 +48,10 @@ public class LoginFragment extends BaseFragment<LoginFragmentView, LoginFragment
     ImageView mUmengQq;
     @BindView(R.id.umeng_weibo)
     ImageView mUmengWeibo;
-    Unbinder unbinder;
     @BindView(R.id.container)
     RelativeLayout mContainer;
+    @BindView(R.id.tv_protocol)
+    TextView mTvProtocol;
 
     @Override
     protected LoginFragmentpresenter initPresenter() {
@@ -76,8 +88,13 @@ public class LoginFragment extends BaseFragment<LoginFragmentView, LoginFragment
             @Override
             public void onClick(View v) {
                 mEdPhone.setCursorVisible(false);
+                InputMethodManager manager = (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
+
+                manager.hideSoftInputFromWindow(mContainer.getWindowToken(),0);
             }
         });
+
+
     }
 
     private void addVerifyFragment() {
@@ -109,6 +126,27 @@ public class LoginFragment extends BaseFragment<LoginFragmentView, LoginFragment
 
             }
         });
+
+        SpannableStringBuilder builder = new SpannableStringBuilder(getResources().getString(R.string.user_protocol));
+
+        ClickableSpan clickableSpan = new ClickableSpan() {
+            @Override
+            public void onClick(View widget) {
+                WebViewActivity.start(getActivity());
+            }
+        };
+
+        builder.setSpan(clickableSpan,12,16, Spanned.SPAN_INCLUSIVE_INCLUSIVE);
+
+        //下划线
+        UnderlineSpan underlineSpan = new UnderlineSpan();
+        builder.setSpan(underlineSpan,12,16, Spanned.SPAN_INCLUSIVE_INCLUSIVE);
+
+        //颜色
+        ForegroundColorSpan span = new ForegroundColorSpan(getResources().getColor(R.color.c_FA6A13));
+        builder.setSpan(span,12,16, Spanned.SPAN_INCLUSIVE_INCLUSIVE);
+        mTvProtocol.setMovementMethod(LinkMovementMethod.getInstance());
+        mTvProtocol.setText(builder);
     }
 
     private void switvhBtnstate(CharSequence s) {

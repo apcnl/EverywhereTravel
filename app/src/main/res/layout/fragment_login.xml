@@ -110,10 +110,9 @@
             />
     </LinearLayout>
     <TextView
-        android:layout_marginTop="@dimen/dp_9"
+        android:layout_marginTop="@dimen/dp_12"
         android:layout_below="@id/ll_container"
         android:id="@+id/wechat_login"
-        android:layout_marginBottom="@dimen/dp_83"
         android:layout_centerHorizontal="true"
         android:layout_width="@dimen/dp_51"
         android:layout_height="@dimen/dp_17"
@@ -123,12 +122,12 @@
         />
     <TextView
         android:layout_marginLeft="@dimen/dp_83"
-        android:id="@+id/ok"
+        android:id="@+id/tv_protocol"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="@dimen/dp_20"
         android:layout_width="@dimen/dp_209"
         android:layout_height="@dimen/dp_18"
-        android:text="登录或注册即同意到处旅行用户协议"
+        android:text="@string/user_protocol"
         android:textColor="@color/c_FF999999"
         android:textSize="@dimen/sp_13"
         />
