@@ -9,6 +9,7 @@ import android.text.InputFilter;
 import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.util.AttributeSet;
+import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
@@ -128,7 +129,7 @@ public class IdentifyingCodeView extends RelativeLayout {
         mTextViews = new TextView[etNumber];
         for (int i = 0; i < mTextViews.length; i++) {
             TextView textView = new TextView(context);
-            textView.setTextSize(etTextSize);
+            textView.setTextSize(TypedValue.COMPLEX_UNIT_PX,etTextSize);
             textView.setTextColor(etTextColor);
             textView.setWidth(etWidth);
             textView.setHeight(etHeight);
@@ -297,7 +298,7 @@ public class IdentifyingCodeView extends RelativeLayout {
     }
 
     public void setBackgroundEnter(boolean b){
-        if (b){
+        if (!b){
             for (int i = 0; i < mTextViews.length; i++) {
                 mTextViews[i].setBackgroundResource(mEtBackgroundEnter);
             }

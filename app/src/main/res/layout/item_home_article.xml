@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <android.support.v7.widget.CardView
+        android:foreground="?android:attr/selectableItemBackground"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:background="@color/c_FFFFFF"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        app:cardElevation="@dimen/dp_10"
+        app:cardCornerRadius="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_15"
+        android:layout_marginRight="@dimen/dp_20"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:scaleType="fitXY"
+                android:id="@+id/img"
+                android:layout_width="@dimen/dp_120"
+                android:layout_height="@dimen/dp_120" />
+            <TextView
+                android:layout_toRightOf="@id/img"
+                android:layout_marginLeft="@dimen/dp_17"
+                android:layout_marginTop="@dimen/dp_17"
+                android:id="@+id/tv_name"
+                android:text="杨晨"
+                android:textSize="@dimen/sp_22"
+                android:textColor="@color/c_333333"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:textColor="@color/c_999999"
+                android:textSize="@dimen/sp_12"
+                android:text="1300关注"
+                android:layout_below="@id/tv_name"
+                android:layout_marginTop="@dimen/dp_3"
+                android:layout_toRightOf="@id/img"
+                android:layout_marginLeft="@dimen/dp_17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_following"/>
+            <ImageView
+                android:layout_toRightOf="@id/img"
+                android:layout_marginLeft="@dimen/dp_19"
+                android:layout_below="@id/tv_following"
+                android:layout_marginTop="@dimen/dp_12"
+                android:src="@drawable/zhanweitu_xianlu_qipao_small"
+                android:layout_width="@dimen/dp_10"
+                android:layout_height="@dimen/dp_12" />
+            <TextView
+                android:id="@+id/tv_location"
+                android:layout_below="@id/tv_following"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_toRightOf="@id/img"
+                android:layout_marginLeft="@dimen/dp_36"
+                android:text="东京"
+                android:textSize="@dimen/sp_12"
+                android:textColor="@color/c_999999"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:layout_toRightOf="@id/img"
+                android:layout_marginLeft="@dimen/dp_19"
+                android:layout_below="@id/tv_following"
+                android:layout_marginTop="@dimen/dp_33"
+                android:src="@drawable/zhanweitu_xianlu_qipao_small"
+                android:layout_width="@dimen/dp_10"
+                android:layout_height="@dimen/dp_12" />
+            <TextView
+                android:id="@+id/tv_occupation"
+                android:layout_below="@id/tv_following"
+                android:layout_marginTop="@dimen/dp_31"
+                android:layout_toRightOf="@id/img"
+                android:layout_marginLeft="@dimen/dp_36"
+                android:text="日本国家旅游局专栏作者"
+                android:textSize="@dimen/sp_12"
+                android:textColor="@color/c_999999"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:id="@+id/img_collect"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/dp_18"
+                android:layout_marginRight="@dimen/dp_10"
+                android:layout_width="@dimen/dp_20"
+                android:layout_height="@dimen/dp_18" />
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+
+</LinearLayout>

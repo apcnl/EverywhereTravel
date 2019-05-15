@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:background="@color/c_FFFFFF"
+    android:layout_marginTop="@dimen/dp_20"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_marginTop="@dimen/dp_20"
+        android:src="@mipmap/ic_launcher"
+        android:id="@+id/user_img"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:layout_width="@dimen/dp_38"
+        android:layout_height="@dimen/dp_38" />
+
+    <TextView
+        android:layout_marginTop="@dimen/dp_20"
+        android:text="@string/share"
+        android:textColor="@color/c_373737"
+        android:textSize="@dimen/sp_14"
+        android:id="@+id/user_name"
+        android:layout_toRightOf="@id/user_img"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:text="2017"
+        android:layout_below="@id/user_name"
+        android:textColor="@color/c_999999"
+        android:textSize="@dimen/sp_10"
+        android:id="@+id/review_time"
+        android:layout_toRightOf="@id/user_img"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:text="@string/share"
+        android:textSize="@dimen/sp_14"
+        android:textColor="@color/c_636363"
+        android:id="@+id/tv_content"
+        android:layout_marginRight="@dimen/dp_20"
+        android:layout_marginTop="@dimen/dp_13"
+        android:layout_alignLeft="@id/review_time"
+        android:layout_below="@id/review_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <View
+        android:layout_marginRight="@dimen/dp_1"
+        android:layout_marginLeft="@dimen/dp_50"
+        android:layout_below="@id/tv_content"
+        android:layout_marginTop="@dimen/dp_21"
+        android:background="@drawable/gra_dedede"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"/>
+
+</RelativeLayout>

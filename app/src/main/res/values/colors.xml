@@ -17,4 +17,11 @@
     <color name="c_eaeaea">#eaeaea</color>
     <color name="transparent">#00ffffff</color>
     <color name="c_333333">#333333</color>
+    <color name="c_dedede">#dedede</color>
+    <color name="c_80FFFFFF">#ccffffff</color>
+    <color name="c_a9a9a9">#a9a9a9</color>
+    <color name="c_FF9D53">#FF9D53</color>
+    <color name="c_666666">#666666</color>
+    <color name="c_F0F0F0">#F0F0F0</color>
+    <color name="c_33000000">#33000000</color>
 </resources>

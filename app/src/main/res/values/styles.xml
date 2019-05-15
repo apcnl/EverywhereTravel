@@ -4,12 +4,24 @@
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorPrimaryDark">@color/c_FFFFFF</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
     <style name="FullScreen" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="android:windowFullscreen">true</item>
     </style>
+    <style name="LoadingTheme" parent="Theme.AppCompat.Dialog">
+        <!--dialog背景设置为透明-->
+        <item name="android:windowBackground">@color/transparent</item>
+        <!--去掉背景半透明效果-->
+        <item name="android:backgroundDimEnabled">true</item>
+
+    </style>
+    <style name="SplashStyle" parent="AppTheme">
+
+        <item name="android:windowBackground">@drawable/layer_splash</item>
+        <item name="android:windowFullscreen">true</item>
+           </style>
 
 </resources>

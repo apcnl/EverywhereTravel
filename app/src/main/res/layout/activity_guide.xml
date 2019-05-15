@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.apcnl.travel.activity.GuideActivity">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <com.example.apcnl.travel.widget.PreviewIndicator
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/dp_43"
+        android:id="@+id/indicator"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:visibility="gone"
+        android:textColor="@color/c_FFFFFF"
+        android:textSize="@dimen/sp_16"
+        android:id="@+id/btn_expe"
+        android:text="@string/expe"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/dp_46"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/btn_me"
+        android:layout_width="@dimen/dp_127"
+        android:layout_height="@dimen/dp_40" />
+
+</RelativeLayout>

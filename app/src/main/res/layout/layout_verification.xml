@@ -14,12 +14,12 @@
         android:layout_height="@dimen/dp_25" />
     <TextView
         android:id="@+id/tv_time"
-        android:textColor="@color/c_999999"
+        android:textColor="@color/c_FA6A13"
         android:layout_marginTop="@dimen/dp_37"
         android:layout_marginLeft="@dimen/dp_252"
-        android:text="重新发送（56s）"
-        android:layout_width="@dimen/dp_108"
-        android:layout_height="@dimen/dp_20" />
+        android:text="重新发送"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
     <TextView
         android:layout_marginTop="@dimen/dp_104"
         android:layout_marginLeft="@dimen/dp_23"
@@ -30,7 +30,7 @@
         android:layout_height="@dimen/dp_38" />
 
     <com.example.apcnl.travel.widget.IdentifyingCodeView
-        android:layout_gravity="center"
+        android:layout_gravity="center_vertical"
         android:id="@+id/icv"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="@dimen/dp_225"
@@ -38,19 +38,19 @@
         app:icv_et_width="@dimen/dp_44"
         app:icv_et_divider_drawable="@drawable/divider_icv"
         app:icv_et_text_color="@color/c_636363"
-        app:icv_et_text_size="@dimen/sp_20"
+        app:icv_et_text_size="@dimen/sp_32"
         app:icv_et_height="@dimen/dp_56"
         android:layout_width="wrap_content"
         android:layout_height="@dimen/dp_56"/>
 
     <TextView
-        android:visibility="gone"
+        android:text="@string/place_later"
+        android:layout_below="@id/icv"
+        android:layout_marginTop="@dimen/dp_33"
         android:id="@+id/tv_later"
         android:textColor="@color/c_FA6A13"
-        android:text="请稍后…"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="@dimen/dp_314"
-        android:layout_width="@dimen/dp_59"
-        android:layout_height="@dimen/dp_20" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
 </RelativeLayout>

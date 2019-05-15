@@ -18,8 +18,8 @@
             android:textSize="@dimen/sp_16"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="@dimen/dp_12"
-            android:layout_width="@dimen/dp_64"
-            android:layout_height="@dimen/dp_25" />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
     </android.support.v7.widget.Toolbar>
     <RelativeLayout
         android:background="@color/c_EAEAEA"
@@ -67,8 +67,8 @@
             android:layout_marginRight="@dimen/dp_10"
             android:layout_marginTop="@dimen/dp_33"
             android:layout_alignParentRight="true"
-            android:layout_width="@dimen/dp_208"
-            android:layout_height="@dimen/dp_44"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:text="         在个地铁口都可以买到，
 有一个西瓜卡的自动售卖机。"
             android:textColor="@color/c_FF636363"

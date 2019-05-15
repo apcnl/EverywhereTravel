@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_450"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:layout_marginRight="@dimen/dp_20"
+        android:layout_marginTop="@dimen/dp_20"
+        app:cardElevation="@dimen/dp_5"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardCornerRadius="@dimen/dp_15"
+        app:cardUseCompatPadding="true">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:scaleType="fitXY"
+                    android:adjustViewBounds="true"
+                    android:id="@+id/img_background"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </FrameLayout>
+            <RelativeLayout
+                android:background="@color/c_80FFFFFF"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_116">
+                <ImageView
+                    android:id="@+id/coordinates"
+                    android:layout_marginTop="@dimen/dp_15"
+                    android:layout_marginLeft="@dimen/dp_15"
+                    android:src="@drawable/zhanweitu_touxiang"
+                    android:layout_width="@dimen/dp_10"
+                    android:layout_height="@dimen/dp_12" />
+                <TextView
+                    android:text="北京"
+                    android:id="@+id/tv_city"
+                    android:textColor="@color/c_999999"
+                    android:textSize="@dimen/sp_14"
+                    android:layout_marginLeft="@dimen/dp_12"
+                    android:layout_toRightOf="@id/coordinates"
+                    android:layout_marginTop="@dimen/dp_15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_marginTop="@dimen/dp_27"
+                    android:layout_marginLeft="@dimen/dp_15"
+                    android:textColor="@color/c_373737"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="银座"
+                    android:textSize="@dimen/sp_26"/>
+                <Button
+                    android:id="@+id/btn_isPurchased"
+                    android:textSize="@dimen/sp_15"
+                    android:textColor="@color/c_FFFFFF"
+                    android:text="¥28.00"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/dp_15"
+                    android:layout_marginTop="@dimen/dp_34"
+                    android:background="@drawable/bg_btn_fa6a13_r15"
+                    android:layout_width="@dimen/dp_74"
+                    android:layout_height="@dimen/dp_29" />
+                <TextView
+                    android:id="@+id/tv_intro"
+                    android:layout_marginTop="@dimen/dp_64"
+                    android:layout_marginLeft="@dimen/dp_15"
+                    android:text="疯狂购物买买买"
+                    android:textSize="@dimen/sp_18"
+                    android:textColor="@color/c_636363"
+                    android:layout_width="@dimen/dp_132"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_marginLeft="@dimen/dp_107"
+                    android:id="@+id/tv_purchasedTimes"
+                    android:layout_marginTop="@dimen/dp_67"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/dp_17"
+                    android:text="630人购买"
+                    android:textSize="@dimen/sp_17"
+                    android:textColor="@color/c_636363"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

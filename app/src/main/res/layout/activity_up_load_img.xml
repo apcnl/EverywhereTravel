@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    tools:context="com.example.apcnl.travel.activity.UpLoadImgActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:background="@color/c_FFFFFF"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_42">
+        <RelativeLayout
+            android:background="@color/c_FFFFFF"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/back_white"
+                android:id="@+id/img_back"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_centerVertical="true"/>
+            <TextView
+                android:text="@string/update_img"
+                android:textSize="@dimen/sp_20"
+                android:textColor="@color/c_333333"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_title"/>
+            <ImageView
+                android:visibility="visible"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/dp_20"
+                android:layout_width="@dimen/dp_17"
+                android:layout_height="@dimen/dp_17"
+                android:src="@drawable/zhanweitu_touxiang"
+                android:id="@+id/img_upload_img"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_centerVertical="true"/>
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/tv_ok"
+                android:textColor="@color/c_FA6A13"
+                android:textSize="@dimen/sp_14"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dp_10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/wan_cheng"/>
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_margin="@dimen/dp_20"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_200" />
+
+</LinearLayout>

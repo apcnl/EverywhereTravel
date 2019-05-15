@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    tools:context="com.example.apcnl.travel.activity.HomeBundleWebViewActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:background="@color/c_FFFFFF"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_44">
+        <ImageView
+            android:layout_marginLeft="@dimen/dp_20"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/img_back"
+            android:src="@mipmap/back_white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tv_title"
+            android:textSize="@dimen/sp_16"
+            android:textColor="@color/c_333333"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </android.support.v7.widget.Toolbar>
+    <View
+        android:background="@drawable/gra_fff_de"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_4"/>
+    <WebView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/webview"/>
+
+</LinearLayout>

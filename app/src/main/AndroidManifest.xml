@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.apcnl.travel">
 
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <!-- 必须的权限 -->
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
@@ -23,29 +25,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.MainActivity"></activity>
+        <activity android:name=".activity.MainActivity" />
         <activity
-            android:name="com.tencent.tauth.AuthActivity"
-            android:launchMode="singleTask"
-            android:noHistory="true">
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
-
-                <data android:scheme="tencent100424468" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name="com.tencent.connect.common.AssistActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-        <activity
-            android:name=".Weixin"
-            android:configChanges="keyboardHidden|orientation|screenSize"
-            android:exported="true"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+            android:name=".activity.LoginActivity"
+            android:theme="@style/FullScreen" />
+        <activity android:name=".activity.WebViewActivity"
+            />
         <activity
             android:name="com.umeng.socialize.media.WBShareCallBackActivity"
             android:configChanges="keyboardHidden|orientation"
@@ -67,16 +52,72 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activity.LoginActivity"
-            android:theme="@style/FullScreen"
-            android:windowSoftInputMode="">
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="tencent100424468" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity android:name=".activity.MeInfoActivity"/>
+        <activity android:name=".activity.UpdateNameOrSigerActivity"/>
+        <activity android:name=".activity.GuideActivity"/>
+        <activity android:name=".activity.UpLoadImgActivity"/>
+        <activity android:name=".activity.MeCollectActivity"
+            android:launchMode="singleInstance"/>
+        <activity
+            android:name=".activity.SplashActivity"
+            android:theme="@style/SplashStyle">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.WebViewActivity"></activity>
+        <activity android:name=".activity.PathParticularsActivity"
+            android:launchMode="singleInstance"/>
+        <activity android:name=".activity.MeFollowActivity"
+            android:launchMode="singleInstance"/>
+
+        <meta-data
+            android:name="channel"
+            android:value="${CHANNEL_VALUE}" />
+
+        <activity android:name=".activity.AllReviewsActivity"
+            android:launchMode="singleInstance"/>
+        <activity android:name=".activity.BanmiParticularsActivity"
+            android:launchMode="singleInstance"/>
+        <activity android:name=".activity.HomeBundleWebViewActivity"
+            android:launchMode="singleInstance"/>
+        <activity android:name=".activity.ThemeActivity"
+            android:launchMode="singleInstance"/>
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.baidu.upload.2provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <activity android:name=".activity.ViewPagerImgActivity"
+            android:launchMode="singleInstance"></activity>
     </application>
 
 </manifest>

@@ -8,6 +8,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.apcnl.travel.util.ToastUtil;
+import com.example.apcnl.travel.widget.LoadingDialog;
+
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
 
@@ -19,6 +22,7 @@ public abstract class BaseFragment<V extends baseView,P extends basePresenter> e
 
     private Unbinder mUnbinder;
     protected P mPresenter;
+    private LoadingDialog mLoadingDialog;
 
     @Nullable
     @Override
@@ -51,5 +55,25 @@ public abstract class BaseFragment<V extends baseView,P extends basePresenter> e
         mUnbinder.unbind();
         mPresenter.onDestory();
         mPresenter = null;
+    }
+
+    @Override
+    public void toastShort(String string) {
+        ToastUtil.showShort(string);
+    }
+
+    @Override
+    public void showLoading() {
+        if (mLoadingDialog == null){
+            mLoadingDialog = new LoadingDialog(getContext());
+        }
+        mLoadingDialog.show();
+    }
+
+    @Override
+    public void hideLoading() {
+        if (mLoadingDialog != null && mLoadingDialog.isShowing()){
+            mLoadingDialog.dismiss();
+        }
     }
 }

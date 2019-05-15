@@ -23,11 +23,15 @@ public class BaseApp extends Application{
     public void onCreate() {
         super.onCreate();
 
+        sBaseApp = this;
+
+        getScreenWH();
         UMConfigure.init(this, "5c0a1ce9b465f541250001c5", "Umeng", UMConfigure.DEVICE_TYPE_PHONE, "");
         UMConfigure.setLogEnabled(true);
         PlatformConfig.setWeixin("wxdc1e388c3822c80b", "3baf1193c85774b3fd9d18447d76cab0");
         //豆瓣RENREN平台目前只能在服务器端配置
-        PlatformConfig.setSinaWeibo("3921700954", "04b48b094faeb16683c32669824ebdad","http://sns.whalecloud.com");
+        PlatformConfig.setSinaWeibo("468512016", "6180868aa92e0b1be95855a6b98d1ffd",
+                "http://sns.whalecloud.com");
         PlatformConfig.setQQZone("100424468", "c7394704798a158208a74ab60104f0ba");
     }
 
