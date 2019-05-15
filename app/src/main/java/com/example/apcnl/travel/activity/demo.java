@@ -8,4 +8,6 @@ public class demo {
 
     int i = 100;
 
+  
+  String str ="123";
 }
