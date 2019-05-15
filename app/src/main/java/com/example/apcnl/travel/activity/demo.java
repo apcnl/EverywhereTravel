@@ -5,4 +5,7 @@ package com.example.apcnl.travel.activity;
  */
 
 public class demo {
+
+    int i = 100;
+
 }
