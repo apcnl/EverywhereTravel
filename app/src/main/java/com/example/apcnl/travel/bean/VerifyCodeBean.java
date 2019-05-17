@@ -1,7 +1,7 @@
 package com.example.apcnl.travel.bean;
 
 /**
- * Created by apcnl on 2019/5/6.
+ * Created by apcnl on 2019/5/16.
  */
 
 public class VerifyCodeBean {

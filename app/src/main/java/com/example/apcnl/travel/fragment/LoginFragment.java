@@ -17,9 +17,7 @@ import android.text.method.LinkMovementMethod;
 import android.text.style.ClickableSpan;
 import android.text.style.ForegroundColorSpan;
 import android.text.style.UnderlineSpan;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -35,15 +33,12 @@ import com.example.apcnl.travel.base.BaseFragment;
 import com.example.apcnl.travel.bean.VerifyCodeBean;
 import com.example.apcnl.travel.net.Constants;
 import com.example.apcnl.travel.presenter.LoginFragmentpresenter;
-import com.example.apcnl.travel.util.ToastUtil;
 import com.example.apcnl.travel.util.Tools;
 import com.example.apcnl.travel.view.LoginFragmentView;
 import com.umeng.socialize.bean.SHARE_MEDIA;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
-import butterknife.Unbinder;
 
 /**
  * Created by apcnl on 2019/5/4.

@@ -6,6 +6,7 @@ import android.util.DisplayMetrics;
 import android.view.Display;
 import android.view.WindowManager;
 
+import com.example.apcnl.travel.util.CrashHandler;
 import com.umeng.commonsdk.UMConfigure;
 import com.umeng.socialize.PlatformConfig;
 
@@ -33,6 +34,16 @@ public class BaseApp extends Application{
         PlatformConfig.setSinaWeibo("468512016", "6180868aa92e0b1be95855a6b98d1ffd",
                 "http://sns.whalecloud.com");
         PlatformConfig.setQQZone("100424468", "c7394704798a158208a74ab60104f0ba");
+
+        initCrashandler();
+    }
+
+    /**
+     * 全局异常捕捉器
+     */
+    private void initCrashandler() {
+        CrashHandler instance = CrashHandler.getInstance();
+        instance.init(BaseApp.getInstance());
     }
 
     //计算屏幕宽高

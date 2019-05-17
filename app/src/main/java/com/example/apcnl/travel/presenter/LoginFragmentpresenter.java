@@ -8,7 +8,6 @@ import com.example.apcnl.travel.base.basePresenter;
 import com.example.apcnl.travel.bean.LoginInfo;
 import com.example.apcnl.travel.bean.VerifyCodeBean;
 import com.example.apcnl.travel.model.LoginFragmentModel;
-import com.example.apcnl.travel.model.VerifyFragmentModel;
 import com.example.apcnl.travel.model.VerifyModel;
 import com.example.apcnl.travel.net.Constants;
 import com.example.apcnl.travel.net.ResultCallBack;

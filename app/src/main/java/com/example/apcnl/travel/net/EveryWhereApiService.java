@@ -12,8 +12,11 @@ import com.example.apcnl.travel.bean.MeFollowBean;
 import com.example.apcnl.travel.bean.MeInfoBean;
 import com.example.apcnl.travel.bean.PathPartIcularsBean;
 import com.example.apcnl.travel.bean.ThemeBean;
+import com.example.apcnl.travel.bean.VerifyCodeBean;
+import com.example.apcnl.travel.bean.VersionNameBean;
 
 import io.reactivex.Observable;
+import okhttp3.ResponseBody;
 import retrofit2.http.GET;
 import retrofit2.http.Header;
 import retrofit2.http.POST;
@@ -74,4 +77,12 @@ public interface EveryWhereApiService {
     Observable<BanmiParticularsPathBean> getBanmiParticularsPathData(@Path("banmiId") int id,
                                                                           @Query("page") int page,
                                                                           @Header("banmi-app-token") String header);
+
+    @GET("api/app/common/getVersionInfo?operating_system=android")
+    Observable<VersionNameBean> getVersionNameData(@Header("banmi-app-token") String header);
+
+    public String sDownLoadAppUrl = "http://cdn.banmi.com/banmiapp/";
+
+    @GET("apk/banmi_330.apk")
+    Observable<ResponseBody> downloadData();
 }
