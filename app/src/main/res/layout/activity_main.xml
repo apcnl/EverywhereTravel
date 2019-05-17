@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/dl"
     tools:context="com.example.apcnl.travel.activity.MainActivity">
 
     <RelativeLayout
@@ -13,34 +12,35 @@
         android:fitsSystemWindows="true"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-        <RelativeLayout
-            android:id="@+id/rl_container"
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:background="@color/c_FFFFFF"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/dp_72">
-            <com.example.apcnl.travel.widget.CircleImageView
-                android:id="@+id/img"
-                android:layout_marginLeft="@dimen/dp_20"
-                android:layout_centerVertical="true"
-                android:src="@drawable/zhanweitu_touxiang"
-                android:layout_width="@dimen/dp_36"
-                android:layout_height="@dimen/dp_36" />
-            <ImageView
-                android:layout_centerVertical="true"
-                android:layout_alignParentRight="true"
-                android:layout_marginRight="@dimen/dp_22"
-                android:src="@drawable/message"
-                android:layout_width="@dimen/dp_20"
-                android:layout_height="@dimen/dp_16" />
-        </RelativeLayout>
-        <FrameLayout
-            android:layout_below="@id/rl_container"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-            <android.support.v4.view.ViewPager
-                android:id="@+id/vp"
+            android:layout_height="@dimen/dp_42">
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
-        </FrameLayout>
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="@dimen/dp_25"
+                    android:layout_height="@dimen/dp_25"
+                    android:src="@drawable/message"
+                    android:layout_centerVertical="true"/>
+            </RelativeLayout>
+        </android.support.v7.widget.Toolbar>
+        <View
+            android:id="@+id/xian"
+            android:layout_below="@id/toolbar"
+            android:background="@drawable/gra_dedede"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_3"/>
+
+    <android.support.v4.view.ViewPager
+        android:layout_below="@+id/xian"
+        android:id="@+id/vp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
         <android.support.design.widget.TabLayout
             app:tabIndicatorHeight="@dimen/dp_0"
             app:tabSelectedTextColor="@color/c_FA6A13"
@@ -51,22 +51,9 @@
             android:layout_alignParentBottom="true"/>
     </RelativeLayout>
 
-    <android.support.design.widget.NavigationView
-        android:theme="@style/FullScreen"
-        android:background="@drawable/na_bg_fff"
-        android:id="@+id/nv"
-        android:layout_gravity="left"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" >
-        <include
-
-            layout="@layout/layout_header"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
-    </android.support.design.widget.NavigationView>
 
 
 
 
 
-</android.support.v4.widget.DrawerLayout>
+</RelativeLayout>

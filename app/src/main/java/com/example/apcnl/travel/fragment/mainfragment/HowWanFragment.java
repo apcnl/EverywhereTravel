@@ -47,13 +47,12 @@ import okhttp3.ResponseBody;
  * Created by apcnl on 2019/5/5.
  */
 
-public class EverywhereFragment extends BaseFragment<EveryWhereView, EveryWherepresenter> implements EveryWhereView {
+public class HowWanFragment extends BaseFragment<EveryWhereView, EveryWherepresenter> implements EveryWhereView {
 
-    private static final String TAG = "EverywhereFragment";
+    private static final String TAG = "HowWanFragment";
     @BindView(R.id.rlv)
     RecyclerView mRlv;
     private String mToken = "JVy0IvZamK7f7FBZLKFtoniiixKMlnnJ6dWZ6NlsY4HGsxcAA9qvFo8yacHCKHE8YAcd0UF9L59nEm7zk9AUixee0Hl8EeWA880c0ikZBW0KEYuxQy5Z9NP3BNoBi3o3Q0g";
-    private ArrayList<EveryWhereBean.ResultBean.BannersBean> mBannersList;
     public ArrayList<EveryWhereBean.ResultBean.RoutesBean> mArticleList;
     private MainEveryWhereRlvAdapter mAdapter;
 
@@ -70,12 +69,11 @@ public class EverywhereFragment extends BaseFragment<EveryWhereView, EveryWherep
     @Override
     protected void initView() {
         showLoading();
-        mBannersList = new ArrayList<>();
         mArticleList = new ArrayList<>();
 
         mRlv.setLayoutManager(new LinearLayoutManager(getContext()));
 
-        mAdapter = new MainEveryWhereRlvAdapter(getContext(), mBannersList, mArticleList);
+        mAdapter = new MainEveryWhereRlvAdapter(getContext(), mArticleList);
         mRlv.setAdapter(mAdapter);
     }
 
@@ -86,7 +84,7 @@ public class EverywhereFragment extends BaseFragment<EveryWhereView, EveryWherep
 //        Log.d(TAG, "initData: "+param);SpUtil.getParam(Constants.TOKEN, mToken)+""
         mPresenter.initData(param);
         //版本检测
-        mPresenter.VersionNameData(param);
+        //mPresenter.VersionNameData(param);
     }
 
     @Override

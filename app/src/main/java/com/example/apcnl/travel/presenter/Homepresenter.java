@@ -27,7 +27,6 @@ public class Homepresenter extends basePresenter<HomeView> {
         mModel.initData(s, new ResultCallBack<HomeBean>() {
             @Override
             public void onSuccess(HomeBean bean) {
-                mMvpView.setData(bean);
             }
 
             @Override
@@ -41,7 +40,6 @@ public class Homepresenter extends basePresenter<HomeView> {
         mModel.setFollowData(id,param, new ResultCallBack<EverywhereFollowBean>() {
             @Override
             public void onSuccess(EverywhereFollowBean bean) {
-                mMvpView.setFollowData(bean);
             }
 
             @Override
@@ -55,7 +53,6 @@ public class Homepresenter extends basePresenter<HomeView> {
         mModel.setUnFollowData(id,param, new ResultCallBack<EverywhereFollowBean>() {
             @Override
             public void onSuccess(EverywhereFollowBean bean) {
-                mMvpView.setUnFollowData(bean);
             }
 
             @Override

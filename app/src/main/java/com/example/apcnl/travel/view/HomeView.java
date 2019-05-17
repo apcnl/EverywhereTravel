@@ -9,9 +9,5 @@ import com.example.apcnl.travel.bean.EverywhereFollowBean;
  */
 
 public interface HomeView extends baseView {
-    void setData(HomeBean bean);
 
-    void setFollowData(EverywhereFollowBean bean);
-
-    void setUnFollowData(EverywhereFollowBean bean);
 }

@@ -11,7 +11,5 @@ import okhttp3.ResponseBody;
 
 public interface MainView extends baseView {
 
-    void onSuccessVersionName(VersionNameBean bean);
 
-    void setData(ResponseBody bean);
 }

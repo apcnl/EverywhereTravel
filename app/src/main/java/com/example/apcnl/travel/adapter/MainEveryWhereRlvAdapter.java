@@ -29,27 +29,22 @@ public class MainEveryWhereRlvAdapter extends RecyclerView.Adapter {
 
     private static final String TAG = "MainEveryWhereRlvAdapter";
     private Context mContext;
-    private ArrayList<EveryWhereBean.ResultBean.BannersBean> mBannersList;
     private ArrayList<EveryWhereBean.ResultBean.RoutesBean> mArticleList;
     private onItemClickListener mClickListener;
     private int mNewsPosition;
     private String mType;
     private onItemBundleClickListener mClickBundleListener;
 
-    public MainEveryWhereRlvAdapter(Context context, ArrayList<EveryWhereBean.ResultBean.BannersBean> bannersList, ArrayList<EveryWhereBean.ResultBean.RoutesBean> articleList) {
+    public MainEveryWhereRlvAdapter(Context context, ArrayList<EveryWhereBean.ResultBean.RoutesBean> articleList) {
 
         mContext = context;
-        mBannersList = bannersList;
         mArticleList = articleList;
     }
 
     @NonNull
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-            if (viewType == 0){
-                View inflate = LayoutInflater.from(mContext).inflate(R.layout.item_everywhere_banner, null, false);
-                return new BannerViewHolder(inflate);
-            }else if (viewType == 1){
+        if (viewType == 1){
                 View inflate = LayoutInflater.from(mContext).inflate(R.layout.item_everywhere_article, null, false);
                 return new ArticleViewHolder(inflate);
             }else {
@@ -61,21 +56,8 @@ public class MainEveryWhereRlvAdapter extends RecyclerView.Adapter {
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, final int position) {
         int itemViewType = getItemViewType(position);
-        if (itemViewType == 0){
-            BannerViewHolder bannerViewHolder = (BannerViewHolder) holder;
-            bannerViewHolder.mBanner.setImages(mBannersList);
-            bannerViewHolder.mBanner.setImageLoader(new ImageLoader() {
-                @Override
-                public void displayImage(Context context, Object path, ImageView imageView) {
-                    EveryWhereBean.ResultBean.BannersBean bean = (EveryWhereBean.ResultBean.BannersBean) path;
-                    Glide.with(mContext).load(bean.getImageURL()).into(imageView);
-                }
-            }).start();
-        }else if (itemViewType == 1){
+         if (itemViewType == 1){
             mNewsPosition = position;
-            if (mBannersList.size()>0){
-                mNewsPosition = position - 1;
-            }
             ArticleViewHolder holder1 = (ArticleViewHolder) holder;
             EveryWhereBean.ResultBean.RoutesBean bean = mArticleList.get(mNewsPosition);
             holder1.tv_city.setText(bean.getCity());
@@ -100,9 +82,6 @@ public class MainEveryWhereRlvAdapter extends RecyclerView.Adapter {
         }
         else if (itemViewType == 2 ){
             int newsPosition = position;
-            if (mBannersList.size()>0){
-                newsPosition = position - 1;
-            }
             Article2ViewHolder holder1 = (Article2ViewHolder) holder;
             EveryWhereBean.ResultBean.RoutesBean bean = mArticleList.get(newsPosition);
             Glide.with(mContext).load(bean.getCardURL()).into(holder1.img_background);
@@ -120,48 +99,26 @@ public class MainEveryWhereRlvAdapter extends RecyclerView.Adapter {
 
     @Override
     public int getItemCount() {
-        if (mBannersList.size()>0){
-            return mArticleList.size()+1;
-        }else {
             return mArticleList.size();
-        }
     }
 
     @Override
     public int getItemViewType(int position) {
 
         int index = 0;
-
-        if (position == 0){
-            index =  0;
-        }else {
             int newsposition = position;
-            if (mBannersList.size()>0){
-                newsposition = position-1;
                 if (mArticleList.get(newsposition).getType().equals(Constants.ROUTE)){
                     index =  1;
                 }else {
                     index =  2;
                 }
-            }
-        }
+
         return index;
     }
 
     public void addData(EveryWhereBean bean) {
-        mBannersList.addAll(bean.getResult().getBanners());
         mArticleList.addAll(bean.getResult().getRoutes());
         notifyDataSetChanged();
-    }
-
-    class BannerViewHolder extends RecyclerView.ViewHolder {
-
-        private Banner mBanner;
-
-        public BannerViewHolder(View itemView) {
-            super(itemView);
-            mBanner = itemView.findViewById(R.id.banner);
-        }
     }
 
     class ArticleViewHolder extends RecyclerView.ViewHolder {
